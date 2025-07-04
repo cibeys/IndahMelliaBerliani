@@ -29,7 +29,7 @@
     --z-back: -10;
     --z-fixed: 100;
     /*===== Colores =====*/
-    --first-color: #FB7DAB;
+    --first-color: #0000FF;
     --dark-color: #18191a;
     --dark-color-alt: #282b3a;
     --white-color: #e6e7e9;
@@ -72,8 +72,8 @@
 }
 
 html {
-    -webkit-scroll-behavior: smooth;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
+    -webkit-scroll-behavior: smooth !important;
 }
 
 body.dark {
@@ -367,13 +367,11 @@ img {
     color: var(--second-color);
 }
 
-.home__social-icon:nth-child(1):hover {
-    color: #666;
-}
 .home__social-icon:nth-child(2):hover {
-    color: #c615ad;
+    color: #eb2adfaa;
 }
-.home__social-icon:nth-child(4):hover {
+
+.home__social-icon:nth-child(3):hover {
     color: red;
 }
 
@@ -390,7 +388,7 @@ img {
 }
 
 .home__blob-img {
-    width: 360px;
+    width: 370px;
 }
 
 /* Definisikan animasi */
@@ -428,6 +426,11 @@ img {
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
 }
 
 .keterampilan-card {
@@ -514,198 +517,6 @@ body.dark .keterampilan-percent {
 }
 
 
-/* ===== SKUTKU SECTION ===== */
-.skutku-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
-    gap: 2rem;
-    margin-top: 2rem;
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 1rem;
-}
-
-.skutku-card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(54, 100, 244, 0.2);
-    display: flex;
-    flex-direction: column;
-}
-
-.skutku-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.skutku-number {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--first-color);
-    margin-right: 1rem;
-    min-width: 30px;
-}
-
-.skutku-title {
-    font-size: 1.3rem;
-    font-weight: var(--font-semi);
-    color: var(--dark-color);
-}
-
-.skutku-category {
-    display: inline-block;
-    background: rgba(54, 100, 244, 0.1);
-    color: var(--first-color);
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
-}
-
-.skutku-description {
-    color: var(--text-light);
-    line-height: 1.6;
-    flex-grow: 1;
-}
-
-.skutku-image {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 0.5rem;
-  margin-top: 1rem;
-  border-radius: 8px;
-}
-
-.skutku-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.skutku-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(54, 100, 244, 0.1);
-    border-color: var(--first-color);
-}
-
-.skutku-card:hover .tkk-image img {
-    transform: scale(1.05);
-}
-
-/* Dark Mode */
-body.dark .skutku-card {
-    background: rgba(40, 43, 58, 0.5);
-    border-color: rgba(168, 85, 247, 0.2);
-}
-
-body.dark .skutku-card:hover {
-    border-color: var(--primary-color);
-    box-shadow: 0 10px 20px rgba(168, 85, 247, 0.1);
-}
-
-body.dark .skutku-number {
-    color: var(--primary-color);
-}
-
-body.dark .skutku-title {
-    color: var(--white-color);
-}
-
-body.dark .skutku-category {
-    background: rgba(168, 85, 247, 0.1);
-    color: var(--primary-color);
-}
-
-
-
-
-/* ===== FOOTER =====*/
-.footer {
-    background-color: var(--second-color);
-    color: #fff;
-    text-align: center;
-    font-weight: var(--font-semi);
-    padding: 2rem 0;
-}
-
-.footer__title {
-    font-size: 2rem;
-    margin-bottom: var(--mb-4);
-}
-
-.footer__social {
-    margin-bottom: var(--mb-4);
-}
-
-.footer__icon {
-    font-size: 1.5rem;
-    color: #fff;
-    margin: 0 var(--mb-2);
-}
-
-.footer__copy {
-    font-size: var(--smaller-font-size);
-}
-
-/*===== DUAL COLUMN LAYOUT =====*/
-.dual-column-containerkh {
-    display: flex;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.columnkh {
-    flex: 1;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
-.column-titlekh {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--first-color);
-    font-size: 1.5rem;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.column-titlekh::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 3px;
-    background: var(--first-color);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .dual-column-containerkh {
-        flex-direction: column;
-    }
-
-    .columnkh {
-        width: 100%;
-    }
-}
-
-/* Dark mode adjustments */
-body.dark .columnkh {
-    background: rgba(40, 43, 58, 0.5);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
 
 /*===== DUAL COLUMN LAYOUT =====*/
 .dual-column-container {
@@ -720,7 +531,7 @@ body.dark .columnkh {
     padding: 1.5rem;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    
 }
 
 .column-title {
@@ -792,13 +603,13 @@ body.dark .home__name {
 
 .timeline-item {
     position: relative;
-    padding-left: 80px;
+    padding-left: 40px;
     margin-bottom: 30px;
 }
 
 .timeline-icon {
     position: absolute;
-    left: 0;
+    left: -5px;
     top: 0;
     width: 40px;
     height: 40px;
@@ -915,6 +726,144 @@ body.dark .timeline-description li::before {
     }
 }
 
+
+/* ===== TKK SECTION ===== */
+.tkk-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
+}
+
+.tkk-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(54, 100, 244, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.tkk-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.tkk-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--first-color);
+    margin-right: 1rem;
+    min-width: 30px;
+}
+
+.tkk-title {
+    font-size: 1.3rem;
+    font-weight: var(--font-semi);
+    color: var(--dark-color);
+}
+
+.tkk-category {
+    display: inline-block;
+    background: rgba(54, 100, 244, 0.1);
+    color: var(--first-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.tkk-description {
+    color: var(--text-light);
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.tkk-image {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+.tkk-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.tkk-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(54, 100, 244, 0.1);
+    border-color: var(--first-color);
+}
+
+.tkk-card:hover .tkk-image img {
+    transform: scale(1.05);
+}
+
+/* Dark Mode */
+body.dark .tkk-card {
+    background: rgba(40, 43, 58, 0.5);
+    border-color: rgba(168, 85, 247, 0.2);
+}
+
+body.dark .tkk-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 20px rgba(168, 85, 247, 0.1);
+}
+
+body.dark .tkk-number {
+    color: var(--primary-color);
+}
+
+body.dark .tkk-title {
+    color: var(--white-color);
+}
+
+body.dark .tkk-category {
+    background: rgba(168, 85, 247, 0.1);
+    color: var(--primary-color);
+}
+
+
+
+/* ===== TKK LIST STYLE ===== */
+.tkk-list {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.tkk-list li {
+    margin-bottom: 8px;
+    position: relative;
+    list-style-type: none;
+    color: var(--text-light);
+}
+
+.tkk-list li::before {
+    content: "▹";
+    position: absolute;
+    left: -20px;
+    color: var(--first-color);
+}
+
+/* Dark Mode */
+body.dark .tkk-list li::before {
+    color: var(--primary-color);
+}
+
+
 /* ===== HOBI SECTION ===== */
 .hobbies-section {
     display: grid;
@@ -980,324 +929,35 @@ body.dark .hobby-name {
     color: var(--white-color);
 }
 
-/* ===== TKK SECTION ===== */
-.tkk-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
 
-.tkk-card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(54, 100, 244, 0.2);
-    display: flex;
-    flex-direction: column;
-}
-
-.tkk-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.tkk-number {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--first-color);
-    margin-right: 1rem;
-    min-width: 30px;
-}
-
-.tkk-title {
-    font-size: 1.3rem;
+/* ===== FOOTER =====*/
+.footer {
+    background-color: var(--second-color);
+    color: #fff;
+    text-align: center;
     font-weight: var(--font-semi);
-    color: var(--dark-color);
+    padding: 2rem 0;
 }
 
-.tkk-category {
-    display: inline-block;
-    background: rgba(54, 100, 244, 0.1);
-    color: var(--first-color);
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
+.footer__title {
+    font-size: 2rem;
+    margin-bottom: var(--mb-4);
 }
 
-.tkk-description {
-    color: var(--text-light);
-    line-height: 1.6;
-    flex-grow: 1;
+.footer__social {
+    margin-bottom: var(--mb-4);
 }
 
-.tkk-image {
-    margin-top: 1rem;
-    border-radius: 8px;
-    overflow: hidden;
-    max-height: 200px;
+.footer__icon {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 var(--mb-2);
 }
 
-.tkk-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+.footer__copy {
+    font-size: var(--smaller-font-size);
 }
 
-.tkk-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(54, 100, 244, 0.1);
-    border-color: var(--first-color);
-}
-
-.tkk-card:hover .tkk-image img {
-    transform: scale(1.05);
-}
-
-/* Dark Mode */
-body.dark .tkk-card {
-    background: rgba(40, 43, 58, 0.5);
-    border-color: rgba(168, 85, 247, 0.2);
-}
-
-body.dark .tkk-card:hover {
-    border-color: var(--primary-color);
-    box-shadow: 0 10px 20px rgba(168, 85, 247, 0.1);
-}
-
-body.dark .tkk-number {
-    color: var(--primary-color);
-}
-
-body.dark .tkk-title {
-    color: var(--white-color);
-}
-
-body.dark .tkk-category {
-    background: rgba(168, 85, 247, 0.1);
-    color: var(--primary-color);
-}
-
-/* ===== TKK IMAGE SLIDER ===== */
-.tkk-slider {
-    position: relative;
-    margin-top: 1rem;
-    border-radius: 8px;
-    overflow: hidden;
-    height: 200px;
-    width: 100%;
-}
-
-.tkk-slide-container {
-    display: flex;
-    transition: transform 0.5s ease;
-    height: 100%;
-    width: 100%;
-}
-
-.tkk-slide {
-    min-width: 100%;
-    height: 100%;
-    position: relative;
-    flex-shrink: 0;
-}
-
-.tkk-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.tkk-slider-nav {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
-    z-index: 2;
-}
-
-.tkk-slider-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.tkk-slider-dot.active {
-    background: var(--first-color);
-}
-
-.tkk-slider-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 2;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.tkk-slider:hover .tkk-slider-btn {
-    opacity: 1;
-}
-
-.tkk-slider-prev {
-    left: 10px;
-}
-
-.tkk-slider-next {
-    right: 10px;
-}
-
-.tkk-card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(54, 100, 244, 0.2);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.tkk-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 1rem;
-}
-
-.tkk-slider {
-    position: relative;
-    margin-top: 1rem;
-    border-radius: 8px;
-    overflow: hidden;
-    height: 200px;
-}
-
-.tkk-slide-container {
-    display: flex;
-    transition: transform 0.5s ease;
-    height: 100%;
-}
-
-.tkk-slide {
-    min-width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.tkk-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.tkk-slider-nav {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
-    z-index: 2;
-}
-
-.tkk-slider-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.tkk-slider-dot.active {
-    background: var(--first-color);
-}
-
-.tkk-slider-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 2;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.tkk-slider:hover .tkk-slider-btn {
-    opacity: 1;
-}
-
-.tkk-slider-prev {
-    left: 10px;
-}
-
-.tkk-slider-next {
-    right: 10px;
-}
-
-/* Dark Mode */
-body.dark .tkk-slider-dot.active {
-    background: var(--primary-color);
-}
-
-/* ===== TKK LIST STYLE ===== */
-.tkk-list {
-    padding-left: 20px;
-    margin: 10px 0;
-}
-
-.tkk-list li {
-    margin-bottom: 8px;
-    position: relative;
-    list-style-type: none;
-    color: var(--text-light);
-}
-
-.tkk-list li::before {
-    content: "▹";
-    position: absolute;
-    left: -20px;
-    color: var(--first-color);
-}
-
-/* Dark Mode */
-body.dark .tkk-list li::before {
-    color: var(--primary-color);
-}
 
 /* ===== MEDIA QUERIES=====*/
 @media screen and (max-width: 320px) {
